@@ -56,7 +56,8 @@ auxiliary_pdf := $(auxiliary_tex:.tex=.pdf)
 all: mock-ia.pdf
 
 mock-ia.pdf: \
-	tripos.cls
+	tripos.cls \
+	ia-1.tex
 
 2023-p01.pdf 2023-p01-solutions.pdf 2023-p01-signoff.pdf: \
 	2023-p01-q01.tex \

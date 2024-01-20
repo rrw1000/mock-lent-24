@@ -1,0 +1,82 @@
+\documentclass{tripos}  % Do not add anything outside the question environment
+\begin{document}
+\begin{question}[MockIA,year=2024,paper=1,question=1,author=rrw]{Databases}
+
+%\emph{\ldots\ awaiting question text from Anil Madhavapeddy (avsm2) \ldots}
+\triposset{fullmarks=20}
+%\typeout{Awaiting question 1 from avsm2: Foundations of Computer Science}
+
+\topic{Databases}
+
+  You are working for an organisation which has a number of services
+  (hosting, bug tracking, booking systems, etc.). The health
+  monitoring system works by having a number of probes, each of which
+  fires at a given interval (30s, a minute, etc.) and records whether
+  the probed system is functional or not.
+
+  Some systems are dependent on others (eg. the booking system is
+  dependent on the hosting system, and a database system, among
+  others).
+
+  You have been asked to build a database to record and process this
+  data, and to issue alerts by telephone to the appropriate on-call
+  staff.
+
+  An alert is a voice message read out over the telephone. Alerts are
+  repeated at an interval chosen by the staff member in question,
+  until they are acknowledged (by pressing a button on your phone,
+  which then informs the software, this fact being recorded in the
+  database).
+
+\begin{enumerate}
+\item Draw an entity-relationship diagram for this system. \fullmarks{5}
+\item Write out the table definitions you would use to implement it in a SQL database.
+  \fullmarks{5}
+\item Write a query to identify outstanding alerts \fullmarks{1}
+\item Write a query to list the services which are currently down (count services whose downtime is due to their dependencies' downtime) \fullmarks{2}
+\item And a query to find the number of hours for which the service has been down. \fullmarks{2}
+\item Write a query, using your schema, to return the number of hours for which a service has failed in the last three days. Do not count failures caused by dependencies of the service going down. \fullmarks{3}
+\item What alternatives to an SQL database might you use to implement parts of this system, and for which parts of the system would they be appropriate? Comment on their advantages and disadvantages.
+   \fullmarks{2}
+
+
+\end{enumerate}
+
+% a typical question template:
+%
+%  Lorem ipsum \ldots
+%
+%  \begin{enumerate}
+%
+%  \item \topic{syllabus keywords}
+%    First part of question \ldots
+%    \fullmarks{5}  % follow each \fullmarks{...} directly with \begin{answer}
+%    \begin{answer}
+%      And the answer is \ldots
+%    \end{answer}
+%
+%  \item \topic{syllabus keyword}   % indicate the relevant syllabus part
+%    Second part \ldots             % as a margin note in solution notes
+%
+%    \begin{quote}  % if some indentation is desired
+%\begin{verbatim}
+%Some source code ...
+%\end{verbatim}
+%    \end{quote}
+%
+%    \begin{enumerate}
+%
+%    \item \label{part1}         % you can use \label and \ref
+%      We now define \ldots      % to refer to parts of your question
+%
+%    \item \topic{syllabus keyword}
+%      As defined in Part~\ref{part1} \ldots
+%
+%    \end{enumerate}
+%
+%    \fullmarks{15}
+%
+%  \end{enumerate}
+%
+\end{question}
+\end{document}
