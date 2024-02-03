@@ -1,0 +1,73 @@
+\documentclass{tripos}  % Do not add anything outside the question environment
+\begin{document}
+\begin{question}[MockIA,year=2024,paper=1,question=2,author=rrw]{Foundations of Computer Science}
+
+  \triposset{fullmarks=20}
+  \topic{Foundations of Computer Science}
+
+  We can implement a comparison function as:
+
+\begin{verbatim}
+# let leq a b = a <= b;;
+val leq: 'a -> 'a -> bool
+\end{verbatim}
+
+This returns \verb|true| iff its first argument is less than or equal to its second argument.
+
+\begin{enumerate}
+\item Write functions
+
+\begin{verbatim}
+val gt: 'a -> 'a -> ('a -> 'a -> bool) -> bool
+val lt: 'a -> 'a -> ('a -> 'a -> bool) -> bool
+val eq: 'a -> 'a -> ('a -> 'a -> bool) -> bool
+\end{verbatim}
+
+To return true if their first argument is greater than, equal to, or less than their second argument.
+\fullmarks{2}
+
+\item A heap is a binary tree with the property that the value at the parent of a node is always smaller than that at either of its children.
+  We can write a datatype for this:
+
+\begin{verbatim}
+type 'a heap =
+ Nil
+| Cons of 'a * ('a option * 'a option)
+\end{verbatim}
+
+Write a function
+
+\begin{verbatim}
+val put: ('a -> 'a -> bool) -> 'a heap -> 'a -> 'a heap
+\end{verbatim}
+
+Which takes a comparison function, a heap and an item, and returns a heap which includes that item. Resolve any ambiguity by making sure your heap is balanced
+\fullmarks{5}
+
+\item Now write a function
+
+\begin{verbatim}
+val take: 'a heap -> ('a -> 'a -> bool) -> 'a heap
+\end{verbatim}
+
+Which, given a heap, removes the root of the heap and returns another heap containing the remaining elements.
+\fullmarks{4}
+
+\item Hence, or otherwise, write an (efficient!) function:
+
+\begin{verbatim}
+val nth: ('a -> 'a -> bool) -> 'a list -> int -> 'a list
+\end{verbatim}
+
+Which returns the \verb|n| th largest elements of of a list.
+\fullmarks{6}
+
+\item What, if any, advantage does your \verb|nth| function have over simply sorting the list and returning the first $n$ elements?
+\fullmarks{1}
+\item Define a datatype to represent a lazy heap. Sketch how you would implement a lazy \verb|take| function.
+\fullmarks{2}
+\end{enumerate}
+
+\end{question}
+\end{document}
+

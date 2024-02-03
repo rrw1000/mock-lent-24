@@ -57,7 +57,9 @@ all: mock-ia.pdf
 
 mock-ia.pdf: \
 	tripos.cls \
-	ia-1.tex
+	ia-1.tex \
+	ia-2.tex \
+	ia-4.tex
 
 2023-p01.pdf 2023-p01-solutions.pdf 2023-p01-signoff.pdf: \
 	2023-p01-q01.tex \

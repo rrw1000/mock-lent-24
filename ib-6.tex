@@ -1,0 +1,28 @@
+\documentclass{tripos}  % Do not add anything outside the question environment
+\begin{document}
+\begin{question}[MockIA,year=2024,paper=1,question=2,author=rrw]{Introduction to Computer Architecture}
+
+\triposset{fullnmarks=20}
+\topic{Introduction to Computer Architecture}
+
+You have been given a CPU design which contains a 16-entry rotating register file and an ALU.
+Each instruction for a subset of this design contains four 4-bit fields, A, B, C and D,
+and a three-bit function field, F.
+
+On each instruction:
+
+\begin{itemize}
+\item Latch the registers given in fields A and B into the ALU
+\item Copy the result of the previous ALU operation into the register given by C
+\item Rotate the register file forward (0->1, 1->2 .. 15->0) by D steps.
+\item Perform the ALU operation F (whose result will be available for the next instruction)
+\end{itemize}
+
+\begin{enumerate}
+\item What other operations would you require to make a general purpose CPU? \fullmarks{3}
+\item Draw a block diagram for a reasonably efficient implementation of this architecture. Give the latency and IPC of your design. \fullmarks{5}
+\item 
+
+\end{enumerate}
+
+
