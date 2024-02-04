@@ -1,0 +1,38 @@
+\documentclass{tripos}  % Do not add anything outside the question environment
+\begin{document}
+\begin{question}[MockIA,year=2024,paper=1,question=6,author=rrw]{Object-Orientated Programming}
+
+You are writing an image processing library in Java. The design is
+for an abstract image class which will be specialised for various
+tasks.
+
+Your library will need to support images in:
+
+\begin{itemize}
+\item RGB or HSV colour
+\item Raster or JPEG data representation (you will be provided with a JPEG class that can access individual pixels in directly encoded JPEG binary data)
+\item Planar or in-line colour.
+\end{itemize}
+
+And will need to support:
+
+\begin{itemize}
+\item Filtering each pixels in an image in various orders (row-first, column-first .. )
+\item Bit-blitting: take a rectangular part a source image, and a rectangular part of a destination image and modify the destination image pixel-wise with an operation applied to both the source and destination image - eg. XORing a rectangular part of image A with a rectangular part of B, with the result going to B.
+\item Loading and saving the images to a file. You are provided with libraries for doing this.
+\end{itemize}
+
+\begin{enumerate}
+\item Design and describe your library, using appropriate design
+  patterns and generics. Give brief pseudocode for how a user of your
+  library would invoke the operations above, and whwat design patterns
+  you have used.  \fullmarks{10}
+\item Draw a UML diagram to represent your library.
+  \fullmarks{5}
+\item What optimisations can you apply to ensure that your library operates reasonably efficiently? How do your abstractions support this?
+  \fullmarks{5}
+\end{enumerate}
+
+\end{question}
+\end{document}
+

@@ -1,0 +1,26 @@
+\documentclass{tripos}  % Do not add anything outside the question environment
+\begin{document}
+\begin{question}[MockIA,year=2024,paper=1,question=5,author=rrw]{Introduction to Graphics}
+
+  \triposset{fullmarks=20}
+  \topic{Introduction to Graphics}
+
+Imagine we are writing a video game. Our game contains a scene in
+which a full-length mirror stands in the centre of a rectangular room
+whose walls are formed from packed spheres of different sizes, lit
+from above by a bright purple light,
+
+We have a relatively powerful GPGPU available, and are using OpenGL
+(or Vulkan at your option) to render the room.
+
+\begin{enumerate}
+\item Describe the role of model, view, and projection matrices and give a projection matrix onto the unit square. \fullmarks{3}
+\item Sketch a program to generate the walls of the room from the unit sphere, located at the origin. Spheres should be of randomly chosen sizes, and as far as possible pack the walls of the unit cube. Include details of how you would compute the model transforms. \fullmarks{6}
+\item Give two options for implementing the mirror and their tradeoffs. \fullmarks{2}
+\item It has been decided that the spheres will have tiny spikes all over their surfaces. What options exist for implementing these, and what are their tradeoffs? \fullmarks{3}
+\item Write a short piece of pseudocode to generate a triangular mesh at an arbitrary accuracy for the unit sphere. \fullmarks{6}
+\end{enumerate}
+
+\end{question}
+\end{document}
+
