@@ -18,11 +18,14 @@ On each instruction:
 \item Perform the ALU operation F (whose result will be available for the next instruction)
 \end{itemize}
 
-\begin{enumerate}
-\item What other operations would you require to make a general purpose CPU? \fullmarks{3}
-\item Draw a block diagram for a reasonably efficient implementation of this architecture. Give the latency and IPC of your design. \fullmarks{5}
-\item 
+The processor is to be part of a 4 core cluster and to run at approximately 1.2GHz.
 
+\begin{enumerate}
+\item Draw a block diagram for a reasonably efficient performance-orientated microarchitectural implementation of this architecture. Give the latency and IPC of your design. \fullmarks{6}
+\item Why are branches a limited factor in modern CPU performance? Outline three techniques for improving the latency of branches \fullmarks{4}
+\item Design a suitable cache, TLB and page table for this processor and comment on its performance characteristics, in particular on why you made the design choices you did. \fullmarks{4}
+  \end{itemize}
+\item Write a SystemVerilog module to compute $x^y$, where $x$ and $y$ are both integer and unsigned, and the result will fit in 32 bits. \fullmarks{6}
 \end{enumerate}
 
 

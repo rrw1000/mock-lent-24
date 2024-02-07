@@ -1,0 +1,35 @@
+\documentclass{tripos}  % Do not add anything outside the question environment
+\begin{document}
+\begin{question}[MockIB,year=2024,paper=1,question=9,author=rrw]{Compiler Construction}
+
+
+\triposset{fullnmarks=20}
+\topic{Compiler Construction}
+
+\begin{itemize}
+\item Construct an SLR(1) parser for:
+\begin{verbatim}
+P -> S eof
+S -> C
+S -> C; S
+C -> E
+C -> if E C | if E C else C
+E -> n | id
+E -> E*E | E+E
+\end{verbatim}
+
+The sentential symbol is $P$. Indicate carefully any choices you have made in how to implement your parser and how they are implemented.\fullmarks{12}
+
+\item Write a small compiler in pseudo-code that accepts expressions as ASTs in the following format:
+
+\begin{verbatim}
+Tree -> Expr Eof
+Expr -> Expr + Expr | Expr * Expr | Expr / Expr | ( Expr )
+\end{verbatim}
+
+and emits RISC V assembler to compute the expression. \fullmarks{8}
+ \end{itemize}
+
+
+\end{question}
+\end{document}
