@@ -2,15 +2,15 @@
 \begin{document}
 \begin{question}[MockIB,year=2024,paper=1,question=1,author=rrw]{Concurrent and Distributed Systems}
 
-\triposset{fullnmarks=20}
+\triposset{fullmarks=20}
 \topic{Concurrent and Distributed Systems}
 
 You are designing concurrency structures for a new supercomputer. This supercomputer is built from 1024 modules, connected via a network; each module contains local memory and 64 processor modules on a PCIe bus. Each processor module contains 8 cores with a unified L3 cache.
 
 Memory is 64 bits wide, and the processor modules have an atomic update memory semantic - a concurrent write of $A$ and $B$ to a location $M$ containing $C$ will result in a read concurrent with those writes reading either $A$,$B$ or $C$ (but not any other value) and reads after the writes will read either $A$ or $B$, but not any other value.
 
-Each thread has a variable {\tt tid} which reads a (64-bit) unique thread id. The operating system provides a {\tt waitlist_t} type , and:
-{\tt suspend(tid, &waitlist)} and {\tt resume(&waitlist)} primitives to suspend and resume threads. Where code is called for, you may write it in any reasonable pseudocode.
+Each thread has a variable \texttt{tid} which reads a (64-bit) unique thread id. The operating system provides a \texttt{waitlist\_t} type , and:
+\texttt{suspend(tid, \&waitlist)} and \texttt{resume(\&waitlist)} primitives to suspend and resume threads. Where code is called for, you may write it in any reasonable pseudocode.
 
 \begin{itemize}
 \item There is a requirement for a program to read and write shared data across concurrent programs running on a single module.

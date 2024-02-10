@@ -53,7 +53,7 @@ questionsolutions_pdf := $(questions_tex:.tex=-solutions.pdf)
 auxiliary_tex := $(sort $(wildcard 20[2-9]?-p??-q??-*.tex))
 auxiliary_pdf := $(auxiliary_tex:.tex=.pdf)
 
-all: mock-ia.pdf
+all: mock-ia.pdf mock-ib.pdf
 
 mock-ia.pdf: \
 	tripos.cls \
@@ -63,6 +63,21 @@ mock-ia.pdf: \
 	ia-5.tex \
 	ia-6.tex \
 	ia-7.tex
+
+mock-ib.pdf: \
+	tripos.cls \
+	ib-1.tex \
+	ib-2.tex \
+	ib-3.tex \
+	ib-4.tex \
+	ib-6.tex \
+	ib-7.tex \
+	ib-8.tex \
+	ib-9.tex \
+	ib-10.tex \
+	ib-11.tex \
+	ib-12.tex \
+	ib-13.tex
 
 # show a table of contents
 toc:

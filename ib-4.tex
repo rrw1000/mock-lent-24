@@ -1,0 +1,42 @@
+\documentclass{tripos}  % Do not add anything outside the question environment
+\begin{document}
+\begin{question}[MockIB,year=2024,paper=1,question=4,author=rrw]{Further Graphics}
+
+  \triposset{fullmarks=20}
+  \topic{Further Graphics}
+
+  \begin{enumerate}
+    \item We have two surfaces A and B, both of which are represented continuously. We
+      would like to compute if they intersect. How would you represent A and B
+      (parametric and/or implicit) and why? Explain in 1-2 sentences. \fullmarks{1}
+    \item You are given a scene with a single plane and light sources. The plane does not emit light, has the same BRDF at all points, and light is reflected equally for all outgoing directions.
+      \begin{enumerate}
+      \item Can we use the local rendering equation for both local and global illumination? If so, why? If not , why not? \fullmarks{2}
+      \item Write a simple expression for the outgoing light at a point on the plane \fullmarks{2}
+      \item Assume that we use $n$ importance-sampled direction samples. Up to a constant, write an expression that approximates the integral.\fullmarks{2}
+        \item We know the incoming light radiance at each geometry point for each direction. We can take $n$ outgoing radiance measurements on the plane.
+          We use the same set of $n$ direction samples at each geometry point to approximate the integral with importance sampling as above (ignoring
+          constants). Compute a discrete approximation of the BRDF sampled at the same direction samples [ {\em Hint:} For $\mathbf{A}\mathbf{x} = \mathbf{b}$, assume $\mathbf{A}^{-1}$ is known ].\fullmarks{5}
+      \end{enumerate}
+    \item We will represent rotations in the $xy$-plane with quaternions
+      \begin{enumerate}
+      \item Write the quaternion representing a rotation of angle $\theta{}$ around the $z$-axis \fullmarks{1}
+      \item Derive the quaternion for rotation by $\theta{}_1$ and then by $\theta{}_2$ around the $z$-axis. [ {\em Hint:}
+        $\cos(a)\cos(b)-\sin(a)\sin(b) = \cos(a+b)$, $\sin(a)\cos(b)+\cos(a)\sin(b) = \sin(a+b)$] \fullmarks{3}
+      \item Starting from spherical blending of quaternions, prove
+        that shortest path interpolation from the first to the second
+        quaternion above (with $\theta_2 > \theta_1$) is given by:
+        \[
+        \mathbf{q}(t) = \cos([(1-t)\theta_1 + t\theta_2]/2) + \hat{z}\sin([(1-t)\theta_1  + t\theta_2]/2)
+        \]
+        where $t \in [0,1]$ [ {\em Hint:} Recall that $\mathbf{q}^t = e^{t log \mathbf{q}}$, $\log \mathbf{q} = \frac{\theta{}}{2}\mathbf{s}$, and $e^{\mathbf{q}} = \cos||\mathbf{q}|| + \frac{\mathbf{q}}{||\mathbf{q}||}\sin ||\mathbf{q}||$ for a quaternion $\mathbf{q} = \cos(\theta / 2) + \mathbf{s}\sin(\theta/2)$.
+          \fullmarks{4}
+        \end{enumerate}
+    
+  \end{enumerate}
+  
+
+  
+\end{question}
+\end{document}
+

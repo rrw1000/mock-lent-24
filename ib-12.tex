@@ -1,0 +1,32 @@
+\documentclass{tripos}  % Do not add anything outside the question environment
+\begin{document}
+\begin{question}[MockIB,year=2024,paper=1,question=12,author=rrw]{Computer Networking}
+
+  \triposset{fullmarks=20}
+  \topic{Computer Networking}
+
+You are building software for a telco. This telco supports voice and
+video communication over an ethernet network using lightly modified
+commodity hardware and standard internet protocols.
+
+Initially, you can assume that you know the sizes of all the buffers
+in the network and that the underlying transport is reliable. All
+hosts can keep up with the network and the network operates at 1GiB/s.
+
+You may assume the topology of the network is fixed.
+
+You may make reasonable assumptions about overheads.
+
+\begin{enumerate}
+\item Describe the layers of header found in an ethernet packet carrying UDP. \fullmarks{4}
+\item Why might a private network running IPv4 protocols over ethernet not be suitable for making reliable telephone calls?\fullmarks{2}
+\item How would you modify this network (protocols and software) so that it was suitable for making reliable telephone and video calls? \fullmarks{6}
+\item Your ethernet is not totally reliable; in fact it loses about 0.1\% of the packets sent over it. Design a mechanism to cope with this. \fullmarks{4}
+\item Under these assumptions, and making some reasonable assumptions about required latency, what utilisation can you support over each link? \fullmarks{4}
+  \end{enumerate}
+
+
+  
+  
+\end{question}
+\end{document}

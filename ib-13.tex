@@ -1,0 +1,51 @@
+\documentclass{tripos}  % Do not add anything outside the question environment
+\begin{document}
+\begin{question}[MockIB,year=2024,paper=1,question=13,author=rrw]{Logic and Proof}
+
+  \triposset{fullmarks=20}
+  \topic{Logic and Proof}
+
+  \begin{enumerate}
+  \item In the context of automatic theorem proving, provide one-sentence definitions of each of the following concepts: {\em satisfiable}, {\em sound}, {\em complete}. You may take as given the definitions of all underlying concepts. \fullmarks{3}
+  \item You have been given a resolution theorem provider with the following errors. For each error, describe, with justification, the consequences of the error.
+    \begin{enumerate}
+    \item A literal is deleted from a clause \fullmarks{1}
+    \item An entire clause is deleted \fullmarks{1}
+    \item The occurs check of unification is not performed \fullmarks{1}
+    \end{enumerate}
+  \item For each of the following sets of clauses, either exhibit a model or show that none exists. $a$ and $b$ are constants, $x$ and $y$ are variables
+    \begin{enumerate}
+    \item
+      \[
+      \{ \neg P(x), Q(x,x) \}
+      \]
+      \[
+      \{ \neg Q(x,y), \neg Q(y,x), R(x,y) \}
+      \]
+      \[
+      \{ \neg R(x,y), \neg R(y,x) \}
+      \]
+      \[
+      \{ P(a), P(b) \}
+      \] \fullmarks{7}
+    \item
+      \[
+      \{ P(x), Q(x) \}
+      \]
+      \[
+      \{ \neg P(x), Q(f(x)) \}
+      \]
+      \[
+      \{ P(x), \neg Q(f(x)) \}
+      \]
+      \[
+      \{ \neg P(x), \neg Q(x) \}
+      \] \fullmarks{7}
+    \end{enumerate}
+   
+    \end{enumerate}
+
+  
+\end{question}
+\end{document}
+
