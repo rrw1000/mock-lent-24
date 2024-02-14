@@ -1,10 +1,27 @@
 \documentclass{tripos}  % Do not add anything outside the question environment
 \begin{document}
-\begin{question}[MockIA,year=2024,paper=1,question=7,author=rrw]{Algorithms I}
+\begin{question}[MockIA,year=2024,paper=1,question=7,author=tms]{Algorithms I}
 
- \includegraphics[scale=0.95]{ia-7-question.pdf}
+  \triposset{fullmarks=20}
+  \topic{Algorithms I}
+
+  Reminder:
+  \[
+  f(n) \in \Theta(g(n)) \Leftrightarrow \exists n_0, c_1, c_2 \in \mathbb{R}_{>0}\, \mbox{such that}\, \forall n > n_0 : 0 < c_1g(n) \le f(n) \le c_2g(n)
+  \]
   
-  
+
+  \begin{enumerate}
+  \item For the bubblesort algorithm, state its best-case $\Theta{}$ complexity and describe, for any given input of arbitrary size $n$, one permutation that would trigger this best-case behaviour. Then give the corresponding permutation of \texttt{[0,1,2,3,4,5,6,7,7,7]}. Then repeat the above for the worst case: state the $\Theta{}$ complexity, saying when it is achieved, and exhibit as a concrete example a permutation of the 10 numbers given. \fullmarks{4}
+  \item Repeat part (a) for the heapsort algorithm. \fullmarks{4}
+  \item Repeat part (a) for the basic quicksort algorithm, where the pivot is simply chosen as the lsat element in the range. \fullmarks{4}
+  \item Write clear and efficient pseudocode to eliminate all duplicates from a linked list of $n$ elements, without changing the order of the remaining elements. Then derive and justify its $\Theta{}$ complexity. \fullmarks{4}
+  \item
+    {[{\em Hint:} The $\Omega{}$ notation, like the $\Theta{}$ notation, is typically used to describe the asymptotic behaviour of a worst-case cost function $f(n)$. When we say, by extension, that a certain task has a complexity bound of $\Omega{}(g(n))$, we mean that this bound applies to the worst-case cost function of every possible algorithm that could solve that task.]}\\
+    \\
+    Give a formula for $f(n) \in \Omega{}(g(n))$, in a format similar to that of the Reminder above, and briefly explain it. Then derive, with a clear justification, a tight $\Omega{}$ complexity bound for the task of eliminating all duplicates from a linked list of $n$ elements. \fullmarks{4}
+  \end{enumerate}
+
 \end{question}
 \end{document}
 

@@ -1,16 +1,34 @@
 \documentclass{tripos}  % Do not add anything outside the question environment
 \begin{document}
-\begin{question}[MockIB,year=2024,paper=1,question=7,author=rrw]{Programming in C and C++}
+\begin{question}[MockIB,year=2024,paper=2,question=7,author=rrw]{Semantics}
 
   \triposset{fullmarks=20}
-  \topic{Programming in C and C++}
+  \topic{Semantics}
+
+  Consider the following syntax for a pure functional language\\
+
+  Booleans $b \in \mathbb{B} = \{ \mbox{\textbf{true}}, \mbox{\textbf{false}} \}$ \\
+  Integers $n \in \mathbb{Z} = \{ \dots{}, -1, 0, 1, \dots{} \}$\\
+  Variables $x \in \mathbb{X}$ for a set $\mathbb{X} = \{ \mbox{x}, \mbox{y}, \mbox{z}, \dots{} \}$ \\
+  Pairs $(a,b)$ , with constructor $(a,b)$ and deconstructors $\mbox{\textbf{fst}} (a,b) = a$ and $\mbox{\textbf{snd}} (a,b) = b$ \\
+  Operations $ op ::= + | \ge$
+  Expressions
+
+  \[
+  e ::= \mbox{\textbf{skip}}\, |\, n\, |\, b |\, e_1\, \mbox{op}\, e_2 \,|\, \mbox{\textbf{if}}\, e_1\, \mbox{\textbf{then}}\, e_2\, \mbox{\textbf{else}}\, e_3\, |\, \mbox{\textbf{fn}}\, x\, \Rightarrow\, e \,|\, e_1 e_2\, |\, x \,|\, (e_1,e_2) \,\|\, \mbox{\textbf{fst}}\, e_1 \,|\, \mbox{\textbf{snd}}\, e_2\, \| \,\mbox{\textbf{fix}}\, e
+  \]
+
+  Where $\mbox{\textbf{fix}}\, e$ has the semantics defined by:
+
+  \[
+  \frac{}{\mbox{\textbf{fix}}\, e \rightarrow e(\mbox{\textbf{fix}}\, e)}
+  \]
 
   \begin{enumerate}
-  \item Describe how strings are stored in C \fullmarks{2}
-  \item Strings are often repetitive and so we would like to compress them. Write code (and interface functions) in C++ which implements run-length encoded strings. Remember to provide both sequential and random access. \fullmarks{10}
-  \item Strings are often similar. Extend your implementation to allow common parts of strings to be stored just once \fullmarks{6}
-  \item What storage management problem did your answer to (c) create? How did you fix it? \fullmarks{2}
-  \end{enumerate}
+  \item Give semantic rules for call-by-value and call-by-name reduction for this language (do not give the rules for binary operators, conditional, or fix). You should define a small-step reduction relation $e \rightarrow e'$, stating precisely what notion of values $v$ you are using. \fullmarks{10}
+  \item We now introduce parallel composition, $ e ::= \dots{}\, |\, e_1\, \mbox{\textbf{par}}\, e_2 $, meaning that $e_1$ executes in parallel with $e_2$; the result is returned as a pair $(v_1, v2_2)$. Give semantics for $\mbox{\textbf{par}}$.\fullmarks{4}
+  \item Give type rules for this language, and prove a type progress theorem for your type system. \fullmarks{6}
+    \end{enumerate}
 
 \end{question}
 \end{document}

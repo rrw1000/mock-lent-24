@@ -1,34 +1,35 @@
 \documentclass{tripos}  % Do not add anything outside the question environment
 \begin{document}
-\begin{question}[MockIB,year=2024,paper=1,question=8,author=rrw]{Semantics}
+\begin{question}[MockIB,year=2024,paper=2,question=8,author=rrw]{Compiler Construction}
 
-  \triposset{fullmarks=20}
-  \topic{Semantics}
 
-  Consider the following syntax for a pure untyped functional language\\
+\triposset{fullmarks=20}
+\topic{Compiler Construction}
 
-  Booleans $b \in \mathbb{B} = \{ \mbox{\textbf{true}}, \mbox{\textbf{false}} \}$ \\
-  Integers $n \in \mathbb{Z} = \{ \dots{}, -1, 0, 1, \dots{} \}$\\
-  Variables $x \in \mathbb{X}$ for a set $\mathbb{X} = \{ \mbox{x}, \mbox{y}, \mbox{z}, \dots{} \}$ \\
-  Pairs $(a,b)$ , with constructor $(a,b)$ and deconstructors $\mbox{\textbf{fst}} (a,b) = a$, and $\mbox{\textbf{snd}} (a,b) = b$ \\
-  Operations $ op ::= + | \ge$
-  Expressions
+\begin{enumerate}
+\item Give SLR(1) parse tables for:
+\begin{verbatim}
+P -> S eof
+S -> C
+S -> C; S
+C -> E
+C -> if E C | if E C else C
+E -> n | id
+E -> E*E | E+E
+\end{verbatim}
 
-  \[
-  e ::= \mbox{\textbf{skip}}\, |\, n\, |\, b |\, e_1\, \mbox{op}\, e_2 \,|\, \mbox{\textbf{if}}\, e_1\, \mbox{\textbf{then}}\, e_2\, \mbox{\textbf{else}}\, e_3\, |\, \mbox{\textbf{fn}}\, x\, \Rightarrow\, e \,|\, e_1 e_2\, |\, x \,|\, (e_1,e_2) \,\|\, \mbox{\textbf{fst}}\, e_1 \,|\, \mbox{\textbf{snd}}\, e_2\, \| \,\mbox{\textbf{fix}}\, e
-  \]
+The sentential symbol is $P$. Indicate carefully any choices you have made in how to implement your parser and how they are implemented.\fullmarks{12}
 
-  Where $\mbox{\textbf{fix}}\, e$ has the semantics defined by:
+\item Write a small compiler in pseudo-code that accepts expressions as ASTs in the following format:
 
-  \[
-  \frac{}{\mbox{\textbf{fix}}\, e \rightarrow e(\mbox{\textbf{fix}}\, e)}
-  \]
+\begin{verbatim}
+Tree -> Expr Eof
+Expr -> Expr + Expr | Expr * Expr | Expr / Expr | ( Expr )
+\end{verbatim}
 
-  \begin{enumerate}
-  \item Give semantic rules for call-by-value and call-by-name reduction for this language (do not give the rules for binary operators, conditional, or fix). You should define a small-step reduction relation $e \rightarrow e'$, stating precisely what notion of values $v$ you are using. \fullmarks{10}
-  \item We now introduce parallel composition, $ e ::= \dots{}\, |\, e_1\, \mbox{\textbf{par}}\, e_2 $, meaning that $e_1$ executes in parallel with $e_2$; the result is returned as a pair $(v_1, v2_2)$. Give semantics for $\mbox{\textbf{par}}$.\fullmarks{4}
-  \item Give type rules for this language, and prove a type progress theorem for your type system. \fullmarks{6}
-    \end{enumerate}
+and emits RISC V assembler to compute the expression. \fullmarks{8}
+ \end{enumerate}
+
 
 \end{question}
 \end{document}

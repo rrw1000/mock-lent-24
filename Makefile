@@ -59,6 +59,7 @@ mock-ia.pdf: \
 	tripos.cls \
 	ia-1.tex \
 	ia-2.tex \
+	ia-3.tex \
 	ia-4.tex \
 	ia-5.tex \
 	ia-6.tex \
@@ -70,14 +71,14 @@ mock-ib.pdf: \
 	ib-2.tex \
 	ib-3.tex \
 	ib-4.tex \
+	ib-5.tex \
 	ib-6.tex \
 	ib-7.tex \
 	ib-8.tex \
 	ib-9.tex \
 	ib-10.tex \
 	ib-11.tex \
-	ib-12.tex \
-	ib-13.tex
+	ib-12.tex
 
 # show a table of contents
 toc:

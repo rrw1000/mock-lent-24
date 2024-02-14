@@ -1,32 +1,16 @@
 \documentclass{tripos}  % Do not add anything outside the question environment
 \begin{document}
-\begin{question}[MockIA,year=2024,paper=1,question=2,author=rrw]{Introduction to Computer Architecture}
+\begin{question}[MockIB,year=2024,paper=2,question=6,author=rrw]{Programming in C and C++}
 
-\triposset{fullmarks=20}
-\topic{Introduction to Computer Architecture}
+  \triposset{fullmarks=20}
+  \topic{Programming in C and C++}
 
-You have been given a CPU design which contains a 16-entry rotating register file and an ALU.
-Each instruction for a subset of this design contains four 4-bit fields, A, B, C and D,
-and a three-bit function field, F.
+  \begin{enumerate}
+  \item Describe how strings are stored in C \fullmarks{2}
+  \item Strings are often repetitive and so we would like to compress them. Write code (and interface functions) in C++ which implements run-length encoded strings. Remember to provide both sequential and random access. \fullmarks{10}
+  \item Strings are often similar. Extend your implementation to allow common parts of strings to be stored just once \fullmarks{6}
+  \item What storage management problem did your answer to (c) create? How did you fix it? \fullmarks{2}
+  \end{enumerate}
 
-On each instruction:
-
-\begin{itemize}
-\item Latch the registers given in fields A and B into the ALU
-\item Copy the result of the previous ALU operation into the register given by C
-\item Rotate the register file forward (0->1, 1->2 .. 15->0) by D steps.
-\item Perform the ALU operation F (whose result will be available for the next instruction)
-\end{itemize}
-
-The processor is to be part of a 4 core cluster and to run at approximately 1.2GHz.
-
-\begin{itemize}
-\item Draw a block diagram for a reasonably efficient performance-orientated microarchitectural implementation of this architecture. Give the latency and IPC of your design. \fullmarks{6}
-\item Why are branches a limited factor in modern CPU performance? Outline three techniques for improving the latency of branches \fullmarks{4}
-\item Design a suitable cache, TLB and page table for this processor and comment on its performance characteristics, in particular on why you made the design choices you did. \fullmarks{4}
-\item Write a SystemVerilog module to compute $x^y$, where $x$ and $y$ are both integer and unsigned, and the result will fit in 32 bits. \fullmarks{6}
-\end{itemize}
 \end{question}
 \end{document}
-
-

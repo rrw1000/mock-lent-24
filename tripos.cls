@@ -220,6 +220,8 @@
 }}}
 \triposset{structure/5q/.style={rubrics={
       Answer \textbf{five} questions.}}}
+\triposset{structure/3q/.style={rubrics={
+      Answer \textbf{three} questions.}}}
 \triposset{structure/aq/.style={rubrics={
       Answer \textbf{all} questions.
     }}}
@@ -243,11 +245,11 @@
 \triposset{signoff style/.style={newsheet=true}}
 \triposset{CST/.style={
     subject=COMPUTER SCIENCE \ Paper \arabic{paper},
-    code=CST,subtitle=,totalmarks=20,time=1.30,endtime=4.30,attempts=five,
+    code=CST,subtitle=,totalmarks=20,time=2.00,endtime=4.00,attempts=three,
     titlewarning={You may not start to read the
     questions printed on the subsequent pages of this question paper
     until instructed that you may do so by the Invigilator},
-    stationery requirements={Script paper\\Surprise\\Fear\\Ruthless efficiency},
+    stationery requirements={Surprise\\Fear\\Ruthless efficiency\\An almost fanatical devotion to the Pope\\Script paper},
     special requirements={Approved calculator permitted}
 }}
 \triposset{MockIA/.style={

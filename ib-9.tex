@@ -1,35 +1,17 @@
 \documentclass{tripos}  % Do not add anything outside the question environment
 \begin{document}
-\begin{question}[MockIB,year=2024,paper=1,question=9,author=rrw]{Compiler Construction}
-
+\begin{question}[MockIB,year=2024,paper=2,question=9,author=rrw]{Computation Theory}
 
 \triposset{fullmarks=20}
-\topic{Compiler Construction}
+\topic{Computation Theory}
 
-\begin{itemize}
-\item Construct an SLR(1) parser for:
-\begin{verbatim}
-P -> S eof
-S -> C
-S -> C; S
-C -> E
-C -> if E C | if E C else C
-E -> n | id
-E -> E*E | E+E
-\end{verbatim}
-
-The sentential symbol is $P$. Indicate carefully any choices you have made in how to implement your parser and how they are implemented.\fullmarks{12}
-
-\item Write a small compiler in pseudo-code that accepts expressions as ASTs in the following format:
-
-\begin{verbatim}
-Tree -> Expr Eof
-Expr -> Expr + Expr | Expr * Expr | Expr / Expr | ( Expr )
-\end{verbatim}
-
-and emits RISC V assembler to compute the expression. \fullmarks{8}
- \end{itemize}
-
+\begin{enumerate}
+\item Describe a register machine \fullmarks{3}
+\item Show how it is possible to encode a register machine program as a number suitable for storage in a register machine register \fullmarks{5}
+\item Give an informal description of how you might write a register machine program, $P$, which given an encoding $d$ of a register machine program in register 0, computes the result of running the register machine program encoded by $d$. \fullmarks{4}
+\item Hence, or otherwise, determine whether it is possible to write a register machine program $Q$ that decides if two other register machine programs $A$ and $B$ produce the same output in register 0, and produce a proof of your determination. \fullmarks{8}
+\end{enumerate}
 
 \end{question}
 \end{document}
+

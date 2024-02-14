@@ -1,32 +1,51 @@
 \documentclass{tripos}  % Do not add anything outside the question environment
 \begin{document}
-\begin{question}[MockIB,year=2024,paper=1,question=12,author=rrw]{Computer Networking}
+\begin{question}[MockIB,year=2024,paper=1,question=12,author=rrw]{Logic and Proof}
 
   \triposset{fullmarks=20}
-  \topic{Computer Networking}
+  \topic{Logic and Proof}
 
-You are building software for a telco. This telco supports voice and
-video communication over an ethernet network using lightly modified
-commodity hardware and standard internet protocols.
+  \begin{enumerate}
+  \item In the context of automatic theorem proving, provide one-sentence definitions of each of the following concepts: {\em satisfiable}, {\em sound}, {\em complete}. You may take as given the definitions of all underlying concepts. \fullmarks{3}
+  \item You have been given a resolution theorem provider with the following errors. For each error, describe, with justification, the consequences of the error.
+    \begin{enumerate}
+    \item A literal is deleted from a clause \fullmarks{1}
+    \item An entire clause is deleted \fullmarks{1}
+    \item The occurs check of unification is not performed \fullmarks{1}
+    \end{enumerate}
+  \item For each of the following sets of clauses, either exhibit a model or show that none exists. $a$ and $b$ are constants, $x$ and $y$ are variables
+    \begin{enumerate}
+    \item
+      \[
+      \{ \neg P(x), Q(x,x) \}
+      \]
+      \[
+      \{ \neg Q(x,y), \neg Q(y,x), R(x,y) \}
+      \]
+      \[
+      \{ \neg R(x,y), \neg R(y,x) \}
+      \]
+      \[
+      \{ P(a), P(b) \}
+      \] \fullmarks{7}
+    \item
+      \[
+      \{ P(x), Q(x) \}
+      \]
+      \[
+      \{ \neg P(x), Q(f(x)) \}
+      \]
+      \[
+      \{ P(x), \neg Q(f(x)) \}
+      \]
+      \[
+      \{ \neg P(x), \neg Q(x) \}
+      \] \fullmarks{7}
+    \end{enumerate}
+   
+    \end{enumerate}
 
-Initially, you can assume that you know the sizes of all the buffers
-in the network and that the underlying transport is reliable. All
-hosts can keep up with the network and the network operates at 1GiB/s.
-
-You may assume the topology of the network is fixed.
-
-You may make reasonable assumptions about overheads.
-
-\begin{enumerate}
-\item Describe the layers of header found in an ethernet packet carrying UDP. \fullmarks{4}
-\item Why might a private network running IPv4 protocols over ethernet not be suitable for making reliable telephone calls?\fullmarks{2}
-\item How would you modify this network (protocols and software) so that it was suitable for making reliable telephone and video calls? \fullmarks{6}
-\item Your ethernet is not totally reliable; in fact it loses about 0.1\% of the packets sent over it. Design a mechanism to cope with this. \fullmarks{4}
-\item Under these assumptions, and making some reasonable assumptions about required latency, what utilisation can you support over each link? \fullmarks{4}
-  \end{enumerate}
-
-
-  
   
 \end{question}
 \end{document}
+

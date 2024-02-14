@@ -1,6 +1,6 @@
 \documentclass{tripos}  % Do not add anything outside the question environment
 \begin{document}
-\begin{question}[MockIB,year=2024,paper=1,question=1,author=rrw]{Concurrent and Distributed Systems}
+\begin{question}[MockIB,year=2024,paper=2,question=1,author=rrw]{Concurrent and Distributed Systems}
 
 \triposset{fullmarks=20}
 \topic{Concurrent and Distributed Systems}
@@ -12,25 +12,25 @@ Memory is 64 bits wide, and the processor modules have an atomic update memory s
 Each thread has a variable \texttt{tid} which reads a (64-bit) unique thread id. The operating system provides a \texttt{waitlist\_t} type , and:
 \texttt{suspend(tid, \&waitlist)} and \texttt{resume(\&waitlist)} primitives to suspend and resume threads. Where code is called for, you may write it in any reasonable pseudocode.
 
-\begin{itemize}
+\begin{enumerate}
 \item There is a requirement for a program to read and write shared data across concurrent programs running on a single module.
-  \begin{itemize}
+  \begin{enumerate}
   \item Write pseudocode for a primitive that allows read and write exclusivity for shared data running on a single module. Remember to consider the case where a user reads a variable and then, based on its value, might like to write to it.\fullmarks{6}
   \item A user has written some code in which one thread adjusts a parameter and a group of other threads then run simulations based on that parameter. They complain that their parameter changes never get actioned. What can you do to address this? \fullmarks{2}
-  \end{itemize}
+  \end{enumerate}
 \item You now turn your attention to message passing between modules.
-  \begin{itemize}
-  \item Some users would like to use memory on remote modules as though it were local.
-    \begin{itemize}
+
+  Some users would like to use memory on remote modules as though it were local.
+    \begin{enumerate}
     \item Outline a scheme which makes this possible and suggest why this might not work as well as they would want. \fullmarks{3}
     \item What message delivery order would be appropriate, and how would you implement it? \fullmarks{3}
-    \end{itemize}
-  \end{itemize}
+    \end{enumerate}
+
   It is desired to implement a configuration database across the whole machine.
-  \begin{itemize}
+  \begin{enumerate}
   \item Outline how the Paxos consensus algorithm could be used to provide a consistent view of this configuration database. \fullmarks{4}
   \item Would it help to improve performance if every node was requireed to to be alive in order for the machine to run at all? If so, how would you implement this? \fullmarks{2}
-    \end{itemize}
-\end{itemize}
+    \end{enumerate}
+\end{enumerate}
 \end{question}
 \end{document}
