@@ -352,7 +352,7 @@
     \@sectionstarttrue
     \ifnewsheet\cleardoublepage\else\ifnewpage\clearpage\else\filbreak\fi\fi
     \vspace{3em}
-    \hspace*{-\indentation}\textbf{SECTION~\Alph{section}}
+    %\hspace*{-\indentation}\textbf{SECTION~\Alph{section}}
     \par
   \fi
 }

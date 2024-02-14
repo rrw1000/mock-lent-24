@@ -14,9 +14,13 @@
   Operations $ op ::= + | \ge$
   Expressions
 
-  \[
-  e ::= \mbox{\textbf{skip}}\, |\, n\, |\, b |\, e_1\, \mbox{op}\, e_2 \,|\, \mbox{\textbf{if}}\, e_1\, \mbox{\textbf{then}}\, e_2\, \mbox{\textbf{else}}\, e_3\, |\, \mbox{\textbf{fn}}\, x\, \Rightarrow\, e \,|\, e_1 e_2\, |\, x \,|\, (e_1,e_2) \,\|\, \mbox{\textbf{fst}}\, e_1 \,|\, \mbox{\textbf{snd}}\, e_2\, \| \,\mbox{\textbf{fix}}\, e
-  \]
+
+\[
+    \begin{split}
+  e ::= & \mbox{\textbf{skip}}\, |\, n\, |\, b |\, e_1\, \mbox{op}\, e_2 \,|\, \mbox{\textbf{if}}\, e_1\, \mbox{\textbf{then}}\, e_2\, \mbox{\textbf{else}}\, e_3\, |\, \mbox{\textbf{fn}}\, x\, \Rightarrow\, e \,|\, e_1 e_2\, |\, x \,|\, (e_1,e_2)\\
+    & \,|\, \mbox{\textbf{fst}}\, e_1 \,|\, \mbox{\textbf{snd}}\, e_2\, | \,\mbox{\textbf{fix}}\, e
+  \end{split}
+\]
 
   Where $\mbox{\textbf{fix}}\, e$ has the semantics defined by:
 
