@@ -30,15 +30,15 @@ To return true if their first argument is greater than, equal to, or less than t
   We can write a datatype for this:
 
 \begin{verbatim}
-type 'a heap =
+type 'a Heap =
  Nil
-| Cons of 'a * ('a option * 'a option)
+| Cons of 'a * ('a Heap * 'a Heap)
 \end{verbatim}
 
 Write a function
 
 \begin{verbatim}
-val put: ('a -> 'a -> bool) -> 'a heap -> 'a -> 'a heap
+val put: ('a -> 'a -> bool) -> 'a Heap -> 'a -> 'a Heap
 \end{verbatim}
 
 Which takes a comparison function, a heap and an item, and returns a heap which includes that item. Resolve any ambiguity by making sure your heap is balanced
@@ -47,7 +47,7 @@ Which takes a comparison function, a heap and an item, and returns a heap which 
 \item Now write a function
 
 \begin{verbatim}
-val take: 'a heap -> ('a -> 'a -> bool) -> 'a heap
+val take: 'a Heap -> ('a -> 'a -> bool) -> 'a Heap
 \end{verbatim}
 
 Which, given a heap, removes the root of the heap and returns another heap containing the remaining elements.

@@ -8,10 +8,11 @@
   We are given a numerical dataset $\{ x_1, x_2, \dots{} x_n\}$. We would like to estimate the ${99}^{\mbox{th}}$ percentile and find a confidence interval for it.
   
   \begin{enumerate}
-  \item We can model the data as independent samples from the $\mbox{Pareto}(1,\alpha)$ distribution:
+  \item We can model the data as independent samples from the $\mbox{Pareto}(1,\alpha)$ distribution, which has the property that if $X \sim{} \mbox{Pareto}(1,\alpha{})$, then:
     \[
     \mathbb{P}(X \leq x) = 1-x^{-\alpha}\, \mbox{if}\, x \ge 1 , 0\,\mbox{if}\, x < 1
     \]
+     Denote the 99th percentile by $q$, so that $\mathbb{P}(\mbox{Pareto}(1,\alpha{}) \le q) = 0.99$.
     \begin{enumerate}
     \item Find the maximum likelihood estimator for $\alpha$ \fullmarks{3}
     \item Find $q$ as a function of $\alpha$ \fullmarks{2}
